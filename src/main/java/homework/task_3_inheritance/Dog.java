@@ -1,7 +1,7 @@
 package homework.task_3_inheritance;
 
 public class Dog extends Animal {
-    private String dogName;
+    private final String dogName;
 
     public Dog(String dogName) {
         this.dogName = dogName;

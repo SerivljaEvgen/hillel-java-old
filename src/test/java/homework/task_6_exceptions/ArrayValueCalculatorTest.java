@@ -45,6 +45,26 @@ class ArrayValueCalculatorTest {
         }
     }
 
+    //2.1
+    @Test
+    void testInvalidInputArray2() {
+        String[][] arr = {
+                {"1", "2", "3", "4" },
+                {"5", "6", "7", "8" },
+                {"9", "10", "11", "12", "13" },
+                {"13", "14", "15", "16"}
+        };
+        ArrayValueCalculator arrCalc = new ArrayValueCalculator();
+        try {
+            int result = arrCalc.doCalc(arr);
+            fail();
+        } catch (ArraySizeException e){
+            assertEquals("ArraySizeException: Array should be 4x4", e.getMessage());
+        } catch (ArrayDataException e){
+            fail();
+        }
+    }
+
     //3 - Тест 3 зробив по аналогії з другим.
     @Test
     void testInvalidDataInArray() {

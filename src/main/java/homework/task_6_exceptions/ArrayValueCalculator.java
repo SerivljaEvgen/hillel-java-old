@@ -3,7 +3,7 @@ package homework.task_6_exceptions;
 public class ArrayValueCalculator {
 
     public int doCalc(String[][] arr) throws ArraySizeException, ArrayDataException  {
-        if (arr.length != 4 || arr[0].length != 4) {
+        if (arr.length != 4 || arr[0].length != 4 || arr[1].length != 4 || arr[2].length != 4 || arr[3].length != 4) {
             throw new ArraySizeException("ArraySizeException: Array should be 4x4");
         }
         int sum = 0;
